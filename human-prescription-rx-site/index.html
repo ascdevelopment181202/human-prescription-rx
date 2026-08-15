@@ -322,15 +322,15 @@
         <a href="#" style="text-decoration:none">LinkedIn</a>
       </div>
     </div>
-    <form id="form-contact" onsubmit="return onContact(event)" style="display:flex;flex-direction:column;gap:16px">
+    <form id="form-contact" onsubmit="return onContact(event)" style="display:flex;flex-direction:column;gap:16px"><input type="hidden" name="access_key" value="b9a2a6d9-c698-497f-88d3-f8c7e1338b6a"><input type="hidden" name="subject" value="New enquiry via humanprescription.com"><input type="checkbox" name="botcheck" style="display:none">
       <label for="c-name" style="font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Name
-        <input id="c-name" type="text" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none">
+        <input id="c-name" name="name" type="text" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none">
       </label>
       <label for="c-email" style="font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Email
-        <input id="c-email" type="email" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none">
+        <input id="c-email" name="email" type="email" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none">
       </label>
       <label for="c-msg" style="font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Message
-        <textarea id="c-msg" rows="5" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none;resize:vertical"></textarea>
+        <textarea id="c-msg" name="message" rows="5" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none;resize:vertical"></textarea>
       </label>
       <button type="submit" id="contact-send" style="align-self:start;white-space:nowrap;background:#C2360F;color:#FFF7EC;border:none;border-radius:999px;padding:.95em 2em;min-height:48px;font-family:Poppins,sans-serif;font-weight:700;font-size:14px;letter-spacing:.02em;cursor:pointer;transition:background .2s,color .2s"><span>Send Message</span></button>
       <p id="cMsg" aria-live="polite" style="margin:0;font-size:14px;min-height:20px;color:rgba(20,20,20,.7)"></p>
@@ -389,7 +389,7 @@
   function onContact(e){
     e.preventDefault();
     document.getElementById('cMsg').textContent = "Thank you — your message has been noted.";
-    document.getElementById('form-contact').reset();
+    var _f=document.getElementById('form-contact');document.getElementById('cMsg').textContent='Sending...';fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(_f)}).then(function(r){return r.json();}).then(function(d){document.getElementById('cMsg').textContent=d.success?'Thank you, your message has been sent.':'Sorry, something went wrong. Please email drpragnya@humanprescription.com directly.';if(d.success)_f.reset();}).catch(function(){document.getElementById('cMsg').textContent='Sorry, something went wrong. Please email drpragnya@humanprescription.com directly.';});
     return false;
   }
 </script>
