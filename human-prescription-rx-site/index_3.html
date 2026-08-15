@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr Pragnya — Ophthalmologist, Educator &amp; Host of Human Prescription Rx</title>
+<meta name="description" content="Dr Pragnya — ophthalmologist, educator and host of Human Prescription Rx. A Prescription for Wellbeing.">
+<meta property="og:title" content="Dr Pragnya — Human Prescription Rx">
+<meta property="og:description" content="A Prescription for Wellbeing. Psychology, medicine and the human body.">
+<meta property="og:image" content="images/podcast_cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Dr Pragnya","jobTitle":["Ophthalmologist","Educator","Podcast Host"],"hasCredential":["B.Sc (Psychology)","MBBS (Hons)","PGDipOphthal","FRANZCO","PGDip in Cataract and Refractive Surgery"],"affiliation":[{"@type":"Organization","name":"London Vision Clinic"},{"@type":"Organization","name":"Moorfields Eye Hospital"}],"sameAs":[]},{"@type":"PodcastSeries","name":"Human Prescription Rx","description":"Human Prescription Rx explores psychology, medicine, and the human body.","author":{"@type":"Person","name":"Dr Pragnya"}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== Human Prescription Rx — site styles ===== */
+  :root{ --yellow:#F9C511; --ink:#141414; --red:#EA4318; }
+  *{box-sizing:border-box;}
+  html,body{margin:0; overflow-x:hidden;}
+  img,svg{max-width:100%;}
+  html{scroll-behavior:smooth;}
+  body{ background:var(--yellow); color:var(--ink); font-family:"Inter",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:var(--ink); text-decoration:none; }
+  a:hover{ color:var(--red); }
+  .nav{ position:sticky; top:0; z-index:50; background:rgba(249,197,17,.86); backdrop-filter:saturate(1.1) blur(8px); border-bottom:1px solid rgba(20,20,20,.08); }
+  .nav-inner{ max-width:1200px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; gap:20px; }
+  .brand-mini{ display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--ink); font-family:"Poppins"; font-weight:800; letter-spacing:.14em; text-transform:uppercase; font-size:14px; }
+  .brand-mini .dot{ width:42px; height:33px; flex:none; background-image:url(images/podcast_cover.png); background-size:101px 101px; background-position:-29px -10px; background-repeat:no-repeat; mix-blend-mode:darken; }
+  .brand-mini .rx{ color:var(--red); }
+  .nav .links{ margin-left:auto; display:flex; gap:28px; }
+  .nav .links a{ color:var(--ink); text-decoration:none; font-weight:500; font-size:14px; letter-spacing:.02em; opacity:.85; }
+  .nav .links a:hover{ opacity:1; }
+  .btn{ display:inline-flex; align-items:center; white-space:nowrap; gap:.55em; font-family:"Poppins"; font-weight:700; letter-spacing:.02em; padding:.85em 1.35em; border-radius:999px; text-decoration:none; font-size:14px; cursor:pointer; border:none; transition:background .2s,color .2s,border-color .2s,transform .1s; }
+  .btn-primary{ background:var(--ink); color:var(--yellow); }
+  .btn-primary:hover{ background:#C2360F; color:#FFF7EC; }
+  .btn-primary:active{ transform:translateY(1px); }
+  .btn-ghost{ background:transparent; color:var(--ink); border:1.6px solid rgba(20,20,20,.25); }
+  .btn-ghost:hover{ border-color:var(--ink); color:var(--ink); }
+  .nav-cta{ margin-left:4px; }
+  .menu{ display:none; background:none; border:none; font-size:22px; color:var(--ink); cursor:pointer; margin-left:auto; }
+  .hero{ max-width:1200px; margin:0 auto; padding:0 24px clamp(28px,4vw,48px); }
+  .hero-grid{ display:grid; grid-template-columns:1.04fr .96fr; gap:clamp(24px,4vw,64px); align-items:center; }
+  .hero-anim{ position:relative; width:clamp(220px,28vw,320px); aspect-ratio:530/521; margin:0 0 4px -6px; }
+  .hero-anim svg{ width:100%; height:100%; display:block; }
+  .hero-anim .mark{ transform-origin:center; animation:hpx-pulse 4.5s ease-in-out infinite; }
+  @keyframes hpx-pulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.035); } }
+  .role-chips{ list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; padding:0; }
+  .role-chips li{ font-family:"Poppins"; font-weight:600; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); border:1.4px solid rgba(20,20,20,.28); background:rgba(20,20,20,.05); border-radius:999px; padding:8px 14px; }
+  h1{ font-family:"Poppins"; font-weight:800; font-size:clamp(40px,7vw,84px); line-height:1; letter-spacing:-.01em; margin:0 0 8px; }
+  .tagline{ font-family:"Poppins"; font-weight:600; font-size:clamp(20px,2.7vw,30px); line-height:1.2; margin:0 0 14px; }
+  .tagline .accent{ color:var(--red); }
+  .lede{ font-size:clamp(15px,1.5vw,17px); line-height:1.6; max-width:38ch; color:rgba(20,20,20,.82); margin:0 0 24px; }
+  .cta-row{ display:flex; flex-wrap:wrap; gap:12px; }
+  .btn{ min-height:48px; }
+  .portrait{ position:relative; width:100%; max-width:440px; margin-left:auto; aspect-ratio:3/4; border-radius:26px; overflow:hidden; background:#2b2b2b; box-shadow:0 30px 60px -30px rgba(20,20,20,.5); }
+  .portrait img{ width:100%; height:100%; object-fit:cover; display:block; }
+  h2{ text-wrap:balance; }
+  #episodes li:hover{ background:#FBF6E9; }
+  #contact-send:hover{ background:#141414 !important; color:#F9C511 !important; }
+  footer a:hover{ color:#F9C511 !important; }
+  #nl-email{ flex:1 1 240px; min-width:0; }
+  .mobile-panel{ display:none; }
+  @media (max-width:900px){
+    main section:not(.hero) > div[data-grid]{ grid-template-columns:1fr !important; gap:36px !important; }
+    footer > div[data-grid]{ grid-template-columns:1fr 1fr !important; gap:32px !important; }
+  }
+  @media (max-width:860px){
+    .nav .links{ display:none; }
+    .nav-cta{ display:none; }
+    .menu{ display:flex; align-items:center; justify-content:center; width:48px; height:48px; margin-left:auto; }
+    .mobile-panel[data-open="1"]{ display:flex; flex-direction:column; padding:8px 24px 20px; gap:2px; border-bottom:1px solid rgba(20,20,20,.1); }
+    .mobile-panel a{ text-decoration:none; font-family:"Poppins"; font-weight:600; font-size:15px; letter-spacing:.06em; text-transform:uppercase; padding:14px 0; min-height:48px; display:flex; align-items:center; border-bottom:1px solid rgba(20,20,20,.08); }
+    .hero-grid{ grid-template-columns:1fr; gap:28px; }
+    .hero-anim{ width:min(70vw,300px); margin:4px auto 8px; }
+    .hero-left{ text-align:center; }
+    .role-chips{ justify-content:center; }
+    .lede{ margin-left:auto; margin-right:auto; }
+    .cta-row{ justify-content:center; }
+    .portrait{ max-width:420px; margin:0 auto; }
+  }
+  @media (max-width:640px){
+    .nav-inner{ padding:10px 20px; }
+    .brand-mini{ font-size:12px; letter-spacing:.1em; }
+    .brand-mini .dot{ width:38px; height:30px; background-size:92px 92px; background-position:-27px -9px; }
+    .hero{ padding:0 20px 44px; }
+    .hero-grid{ gap:22px; }
+    .hero-anim{ width:min(52vw,200px); margin:0 auto 4px; }
+    h1{ font-size:clamp(36px,10.5vw,52px); }
+    .tagline{ font-size:clamp(19px,5.4vw,24px); }
+    .lede{ font-size:15.5px; margin-bottom:22px; }
+    .cta-row .btn{ width:100%; justify-content:center; }
+    .portrait{ max-width:360px; border-radius:20px; }
+    main section:not(.hero) > div{ padding:56px 20px !important; }
+    #biography > div, #podcast > div, #contact > div{ gap:32px !important; }
+    #biography [data-grid] > div:first-child{ max-width:380px; margin:0 auto; }
+    #contact a[href^="mailto"]{ font-size:16px; word-break:break-word; }
+    #episodes li{ display:flex !important; flex-direction:column; align-items:flex-start; gap:10px !important; padding:26px 0 !important; }
+    #episodes li a{ min-height:44px; }
+    #newsletter form{ flex-direction:column; }
+    #newsletter #nl-email{ flex:0 0 auto; width:100%; }
+    #newsletter form .btn{ width:100%; justify-content:center; }
+    footer > div[data-grid]{ padding:56px 20px 32px !important; }
+    footer > div:last-child{ padding:0 20px 36px !important; }
+    footer a, #contact a{ min-height:44px; display:inline-flex; align-items:center; }
+  }
+  @media (max-width:420px){
+    h1{ font-size:34px; }
+    .tagline{ font-size:20px; }
+    .role-chips li{ font-size:11px; padding:7px 12px; letter-spacing:.08em; }
+    .hero-anim{ width:min(48vw,170px); }
+    .portrait{ max-width:320px; }
+  }
+  @media (prefers-reduced-motion:reduce){ .hero-anim .mark{ animation:none; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand-mini" href="#top">
+      <span class="dot" aria-hidden="true"></span>Human Prescription <span class="rx">Rx</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#podcast">Podcast</a>
+      <a href="#episodes">Episodes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#podcast">Listen</a>
+    <button class="menu" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel" data-open="0">
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#podcast" onclick="closeMenu()">Podcast</a>
+    <a href="#episodes" onclick="closeMenu()">Episodes</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-anim" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Human Prescription Rx mark">
+          <g class="mark" fill="none" stroke-linecap="round">
+            <circle cx="100" cy="100" r="16" stroke="#141414" stroke-width="4"></circle>
+            <path d="M100 66 a34 34 0 1 1 -0.1 0" stroke="#EA4318" stroke-width="4" stroke-dasharray="150 40"></path>
+            <path d="M100 50 a50 50 0 1 1 -0.1 0" stroke="#141414" stroke-width="4" stroke-dasharray="220 55"></path>
+            <path d="M100 34 a66 66 0 1 1 -0.1 0" stroke="#EA4318" stroke-width="4" stroke-dasharray="300 70"></path>
+            <path d="M100 18 a82 82 0 1 1 -0.1 0" stroke="#141414" stroke-width="4" stroke-dasharray="380 90"></path>
+          </g>
+        </svg>
+      </div>
+      <ul class="role-chips"><li>Ophthalmologist</li><li>Educator</li><li>Podcast Host</li></ul>
+      <h1>Dr Pragnya</h1>
+      <p class="tagline">A Prescription for <span class="accent">Wellbeing</span>.</p>
+      <p class="lede">Bridging medicine, psychology and the mind–body connection — the science and stories behind living well.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#podcast">▶ Listen to the podcast</a>
+        <a class="btn btn-ghost" href="#about">About Dr Pragnya →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <!-- HERO PORTRAIT — brand podcast photo -->
+      <div class="portrait">
+        <img src="images/pragnyapfp.jpeg" alt="Dr Pragnya seated with a podcast microphone, holding a glowing Dr Pragnya neon sign — host of Human Prescription Rx" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="border-top:1px solid rgba(20,20,20,.14)">
+  <div data-grid="1" style="max-width:1200px;margin:0 auto;padding:88px 24px;display:grid;grid-template-columns:280px 1fr;gap:48px">
+    <div>
+      <p style="margin:0 0 10px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.78)">Meet Pragnya</p>
+      <h2 style="margin:0;font-family:Poppins,sans-serif;font-weight:800;font-size:38px;letter-spacing:-.01em">About</h2>
+    </div>
+    <p style="margin:0;font-size:clamp(20px,2.4vw,28px);line-height:1.5;font-weight:400;color:rgba(20,20,20,.9);text-wrap:pretty">I'm Dr. Pragnya — an ophthalmologist, educator, and podcast host fascinated by what drives human health, performance, and fulfilment. Through Human Prescription <span style="color:#EA4318;font-weight:600">Rx</span>, I bring together medicine, psychology, and curiosity about the mind–body connection.</p>
+  </div>
+</section>
+
+<section id="biography" style="background:#FBF6E9">
+  <div data-grid="1" style="max-width:1200px;margin:0 auto;padding:96px 24px;display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start">
+    <div style="position:relative">
+      <div style="position:absolute;inset:-14px 14px 14px -14px;border:1.5px solid #141414;border-radius:22px"></div>
+      <img src="images/pragnya_standing.jpeg" alt="Dr Pragnya standing outdoors in a red suit" loading="lazy" style="position:relative;display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 28%;border-radius:22px;background:#2b2b2b" onerror="this.style.opacity='0'">
+    </div>
+    <div>
+      <p style="margin:0 0 10px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.78)">Dr. Pragnya</p>
+      <h2 style="margin:0 0 30px;font-family:Poppins,sans-serif;font-weight:800;font-size:38px;letter-spacing:-.01em">Biography</h2>
+      <div style="display:flex;flex-direction:column;gap:22px;font-size:17px;line-height:1.7;max-width:62ch;color:rgba(20,20,20,.88);text-wrap:pretty">
+        <p style="margin:0">Dr. Pragnya is an ophthalmologist, educator, and podcast host with a passion for understanding what drives human health, performance, and fulfilment. Having completed her specialist ophthalmology training in Australia and recently attaining her FRANZCO qualification, she is currently undertaking fellowships in refractive surgery at London Vision Clinic and Moorfields Eye Hospital in London.</p>
+        <p style="margin:0">Alongside her clinical work, she has a longstanding interest in psychology, wellbeing, leadership, and the cultural factors that shape health and human potential. She serves on the boards of RANZCO Women in Ophthalmology and the Cultural Curriculum Committee, advocating for greater diversity, wellbeing, and positive change within medicine.</p>
+        <p style="margin:0">As the host of Human Prescription Rx, she brings together her background in medicine with a curiosity about the mind–body connection, human behaviour, and personal growth — exploring the science and stories behind living well.</p>
+      </div>
+      <p style="margin:38px 0 14px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.78)">Qualifications</p>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px">
+        <li style="border:1.4px solid #141414;border-radius:999px;padding:10px 18px;font-family:Poppins,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">B.Sc (Psychology)</li>
+        <li style="border:1.4px solid #141414;border-radius:999px;padding:10px 18px;font-family:Poppins,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">MBBS (Hons)</li>
+        <li style="border:1.4px solid #141414;border-radius:999px;padding:10px 18px;font-family:Poppins,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">PGDipOphthal</li>
+        <li style="border:1.4px solid #141414;border-radius:999px;padding:10px 18px;font-family:Poppins,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">FRANZCO</li>
+        <li style="border:1.4px solid #141414;border-radius:999px;padding:10px 18px;font-family:Poppins,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">PGDip Cataract &amp; Refractive Surgery</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="podcast" style="border-top:1px solid rgba(20,20,20,.14)">
+  <div data-grid="1" style="max-width:1200px;margin:0 auto;padding:96px 24px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center">
+    <div>
+      <p style="margin:0 0 10px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.78)">The Podcast</p>
+      <h2 style="margin:0 0 8px;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(34px,4.6vw,56px);line-height:1.02;letter-spacing:-.01em">Human Prescription <span style="color:#EA4318">Rx</span></h2>
+      <p style="margin:0 0 26px;font-family:Poppins,sans-serif;font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.7)">Psychology • Medicine • The Human Body</p>
+      <p style="margin:0 0 34px;font-size:17px;line-height:1.7;max-width:56ch;color:rgba(20,20,20,.88);text-wrap:pretty">Human Prescription Rx explores psychology, medicine, and the human body — combining insights from science, wellbeing, and human performance to uncover the principles that help people live healthier, more meaningful lives.</p>
+      <div id="cta-subscribe" style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn btn-primary" href="#"><span style="font-weight:500;opacity:.75;font-size:12px">Listen on</span> Spotify</a>
+        <a class="btn btn-primary" href="#"><span style="font-weight:500;opacity:.75;font-size:12px">Listen on</span> Apple Podcasts</a>
+        <a class="btn btn-primary" href="#"><span style="font-weight:500;opacity:.75;font-size:12px">Listen on</span> YouTube</a>
+      </div>
+      <p style="margin:16px 0 0;font-size:13px;color:rgba(20,20,20,.78)">Links coming soon.</p>
+    </div>
+    <div>
+      <!-- PODCAST COVER ART -->
+      <img src="images/podcast_cover.png" alt="Human Prescription Rx podcast cover art — a fingerprint transforming into a brain" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;box-shadow:0 30px 60px -30px rgba(20,20,20,.5);background:#F9C511" onerror="this.style.opacity='0'">
+    </div>
+  </div>
+</section>
+
+<section id="events" style="background:#141414;color:#FBF6E9">
+  <div style="max-width:1200px;margin:0 auto;padding:96px 24px;text-align:center">
+    <p style="margin:0 0 14px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.6">Live Events</p>
+    <h2 style="margin:0 auto 22px;max-width:22ch;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(30px,4.4vw,50px);line-height:1.05;letter-spacing:-.01em">Human Prescription <span style="color:#F9C511">Rx</span> — A Live Conversation</h2>
+    <p style="margin:0 auto;max-width:52ch;font-size:17px;line-height:1.7;opacity:.85">Human Prescription Rx comes to life on stage — bringing the conversation to audiences in person.</p>
+    <p style="margin:32px 0 0;font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#F9C511">Upcoming events to be announced.</p>
+  </div>
+</section>
+
+<section id="episodes">
+  <div style="max-width:1200px;margin:0 auto;padding:96px 24px">
+    <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:44px">
+      <div>
+        <p style="margin:0 0 10px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.78)">Episodes</p>
+        <h2 style="margin:0;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(30px,4vw,44px);letter-spacing:-.01em">Latest Episodes</h2>
+      </div>
+      <a href="#" style="font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:1.6px solid #141414;padding-bottom:4px">See all episodes</a>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;border-top:1px solid rgba(20,20,20,.2)">
+      <li style="border-bottom:1px solid rgba(20,20,20,.2);padding:32px 8px;display:grid;grid-template-columns:72px 1.1fr 1.4fr auto;gap:28px;align-items:center;transition:background .25s ease">
+        <span style="font-family:Poppins,sans-serif;font-weight:800;font-size:24px;color:rgba(20,20,20,.55)">01</span>
+        <div>
+          <h3 style="margin:0 0 6px;font-family:Poppins,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em">The Mind-Body Connection</h3>
+          <p style="margin:0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,20,20,.72)">Episode Placeholder</p>
+        </div>
+        <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(20,20,20,.82);text-wrap:pretty">Exploring the science behind how our thoughts, emotions, and beliefs directly shape our physical health and wellbeing.</p>
+        <a href="#" aria-label="Listen to this episode" style="display:flex;align-items:center;gap:12px;font-family:Poppins,sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;white-space:nowrap">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" style="flex:none"><circle cx="17" cy="17" r="16" fill="none" stroke="#141414" stroke-width="1.4"></circle><path d="M14 11.5 23 17l-9 5.5Z" fill="none" stroke="#141414" stroke-width="1.4" stroke-linejoin="round"></path></svg>
+          Listen
+        </a>
+      </li>
+      <li style="border-bottom:1px solid rgba(20,20,20,.2);padding:32px 8px;display:grid;grid-template-columns:72px 1.1fr 1.4fr auto;gap:28px;align-items:center;transition:background .25s ease">
+        <span style="font-family:Poppins,sans-serif;font-weight:800;font-size:24px;color:rgba(20,20,20,.55)">02</span>
+        <div>
+          <h3 style="margin:0 0 6px;font-family:Poppins,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em">Sovereignty &amp; Self-Leadership</h3>
+          <p style="margin:0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,20,20,.72)">Episode Placeholder</p>
+        </div>
+        <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(20,20,20,.82);text-wrap:pretty">What does it truly mean to be the author of your own life? A deep dive into personal agency, identity, and the psychology of change.</p>
+        <a href="#" aria-label="Listen to this episode" style="display:flex;align-items:center;gap:12px;font-family:Poppins,sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;white-space:nowrap">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" style="flex:none"><circle cx="17" cy="17" r="16" fill="none" stroke="#141414" stroke-width="1.4"></circle><path d="M14 11.5 23 17l-9 5.5Z" fill="none" stroke="#141414" stroke-width="1.4" stroke-linejoin="round"></path></svg>
+          Listen
+        </a>
+      </li>
+      <li style="border-bottom:1px solid rgba(20,20,20,.2);padding:32px 8px;display:grid;grid-template-columns:72px 1.1fr 1.4fr auto;gap:28px;align-items:center;transition:background .25s ease">
+        <span style="font-family:Poppins,sans-serif;font-weight:800;font-size:24px;color:rgba(20,20,20,.55)">03</span>
+        <div>
+          <h3 style="margin:0 0 6px;font-family:Poppins,sans-serif;font-weight:700;font-size:19px;letter-spacing:-.01em">Vision &amp; Perception</h3>
+          <p style="margin:0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,20,20,.72)">Episode Placeholder</p>
+        </div>
+        <p style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(20,20,20,.82);text-wrap:pretty">Through the lens of ophthalmology and neuroscience, how does the way we see the world reflect the way we experience it?</p>
+        <a href="#" aria-label="Listen to this episode" style="display:flex;align-items:center;gap:12px;font-family:Poppins,sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;white-space:nowrap">
+          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" style="flex:none"><circle cx="17" cy="17" r="16" fill="none" stroke="#141414" stroke-width="1.4"></circle><path d="M14 11.5 23 17l-9 5.5Z" fill="none" stroke="#141414" stroke-width="1.4" stroke-linejoin="round"></path></svg>
+          Listen
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section aria-label="Philosophy" style="border-top:1px solid rgba(20,20,20,.14);border-bottom:1px solid rgba(20,20,20,.14)">
+  <div style="max-width:1200px;margin:0 auto;padding:110px 24px;text-align:center">
+    <blockquote style="margin:0 auto;max-width:24ch;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(32px,5.6vw,68px);line-height:1.08;letter-spacing:-.015em">Living well begins with understanding the <span style="color:#EA4318">mind</span> and body as one.</blockquote>
+  </div>
+</section>
+
+<section id="newsletter" style="background:#FBF6E9">
+  <div style="max-width:800px;margin:0 auto;padding:96px 24px;text-align:center">
+    <p style="margin:0 0 14px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.78)">Newsletter</p>
+    <h2 style="margin:0 0 16px;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(28px,4.2vw,46px);line-height:1.08;letter-spacing:-.01em">A prescription for wellbeing — in your inbox.</h2>
+    <p style="margin:0 auto 34px;max-width:48ch;font-size:16px;line-height:1.6;color:rgba(20,20,20,.8)">Occasional notes on the mind, the body and living well — sent when there's something worth reading.</p>
+    <form id="form-newsletter" onsubmit="return onSubscribe(event)" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:520px;margin:0 auto">
+      <label for="nl-email" style="position:absolute;left:-9999px">Email address</label>
+      <input id="nl-email" type="email" required="required" placeholder="you@email.com" style="background:transparent;border:1.6px solid #141414;border-radius:999px;padding:14px 22px;font-size:16px;color:#141414">
+      <button class="btn btn-primary" id="cta-newsletter" type="submit">Subscribe</button>
+    </form>
+    <p id="nlMsg" aria-live="polite" style="margin:16px 0 0;font-size:14px;min-height:20px;color:rgba(20,20,20,.7)"></p>
+  </div>
+</section>
+
+<section id="contact">
+  <div data-grid="1" style="max-width:1200px;margin:0 auto;padding:96px 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+    <div>
+      <h2 style="margin:0 0 20px;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(32px,4.4vw,50px);line-height:1.04;letter-spacing:-.01em">Get in touch</h2>
+      <p style="margin:0 0 32px;font-size:17px;line-height:1.7;max-width:46ch;color:rgba(20,20,20,.88);text-wrap:pretty">Whether you're interested in collaboration, guest enquiries, or simply want to connect — I'd love to hear from you.</p>
+      <p style="margin:0 0 8px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.78)">Email</p>
+      <a href="mailto:drpragnya@humanprescription.com" style="font-family:Poppins,sans-serif;font-weight:700;font-size:clamp(18px,2.2vw,24px);text-decoration:none;border-bottom:1.6px solid #141414;padding-bottom:4px">drpragnya@humanprescription.com</a>
+      <div style="display:flex;gap:20px;margin-top:34px;font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase">
+        <a href="#" style="text-decoration:none">Instagram</a>
+        <a href="#" style="text-decoration:none">LinkedIn</a>
+      </div>
+    </div>
+    <form id="form-contact" onsubmit="return onContact(event)" style="display:flex;flex-direction:column;gap:16px"><input type="hidden" name="access_key" value="b9a2a6d9-c698-497f-88d3-f8c7e1338b6a"><input type="hidden" name="subject" value="New enquiry via humanprescription.com"><input type="checkbox" name="botcheck" style="display:none">
+      <label for="c-name" style="font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Name
+        <input id="c-name" name="name" type="text" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none">
+      </label>
+      <label for="c-email" style="font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Email
+        <input id="c-email" name="email" type="email" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none">
+      </label>
+      <label for="c-msg" style="font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase">Message
+        <textarea id="c-msg" name="message" rows="5" required="required" style="display:block;width:100%;margin-top:8px;background:transparent;border:1.6px solid #141414;border-radius:14px;padding:14px 18px;font-size:16px;color:#141414;font-family:Inter,sans-serif;letter-spacing:normal;text-transform:none;resize:vertical"></textarea>
+      </label>
+      <button type="submit" id="contact-send" style="align-self:start;white-space:nowrap;background:#C2360F;color:#FFF7EC;border:none;border-radius:999px;padding:.95em 2em;min-height:48px;font-family:Poppins,sans-serif;font-weight:700;font-size:14px;letter-spacing:.02em;cursor:pointer;transition:background .2s,color .2s"><span>Send Message</span></button>
+      <p id="cMsg" aria-live="polite" style="margin:0;font-size:14px;min-height:20px;color:rgba(20,20,20,.7)"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer style="background:#141414;color:#FBF6E9">
+  <div data-grid="1" style="max-width:1200px;margin:0 auto;padding:72px 24px 40px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+        <svg width="26" height="26" viewBox="0 0 40 40" aria-hidden="true" style="flex:none"><g fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6a14 14 0 0 0 0 28" stroke="#F9C511"></path><path d="M20 10c5 0 9 4.4 9 10s-4 10-9 10" stroke="#EA4318"></path><path d="M20 14c3 0 5.5 2.6 5.5 6S23 26 20 26" stroke="#EA4318"></path></g></svg>
+        <span style="font-family:Poppins,sans-serif;font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase">Human Prescription <span style="color:#EA4318">Rx</span></span>
+      </div>
+      <p style="margin:0;font-family:Poppins,sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.7">A Prescription for Wellbeing.</p>
+    </div>
+    <nav aria-label="Footer" style="display:flex;flex-direction:column;gap:12px;font-family:Poppins,sans-serif;font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase">
+      <a href="#about" style="color:#FBF6E9;text-decoration:none">About</a>
+      <a href="#podcast" style="color:#FBF6E9;text-decoration:none">Podcast</a>
+      <a href="#episodes" style="color:#FBF6E9;text-decoration:none">Episodes</a>
+      <a href="#contact" style="color:#FBF6E9;text-decoration:none">Contact</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:12px;font-family:Poppins,sans-serif;font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase">
+      <a href="#" style="color:#FBF6E9;text-decoration:none">Spotify</a>
+      <a href="#" style="color:#FBF6E9;text-decoration:none">Apple Podcasts</a>
+      <a href="#" style="color:#FBF6E9;text-decoration:none">YouTube</a>
+      <a href="#" style="color:#FBF6E9;text-decoration:none">Instagram</a>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px 44px">
+    <div style="height:1px;background:rgba(251,246,233,.2);margin-bottom:22px"></div>
+    <p style="margin:0;font-size:13px;letter-spacing:.04em;opacity:.6">© 2026 Human Prescription Rx. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){
+    var p = document.getElementById('mobilePanel');
+    var b = document.getElementById('menuBtn');
+    var open = p.getAttribute('data-open') === '1';
+    p.setAttribute('data-open', open ? '0' : '1');
+    b.setAttribute('aria-expanded', open ? 'false' : 'true');
+  }
+  function closeMenu(){
+    document.getElementById('mobilePanel').setAttribute('data-open','0');
+    document.getElementById('menuBtn').setAttribute('aria-expanded','false');
+  }
+  function onSubscribe(e){
+    e.preventDefault();
+    document.getElementById('nlMsg').textContent = "Thank you — you're on the list.";
+    document.getElementById('form-newsletter').reset();
+    return false;
+  }
+  function onContact(e){
+    e.preventDefault();
+    var _f=document.getElementById('form-contact');document.getElementById('cMsg').textContent='Sending...';fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(_f)}).then(function(r){return r.json();}).then(function(d){document.getElementById('cMsg').textContent=d.success?'Thank you, your message has been sent.':'Sorry, something went wrong. Please email drpragnya@humanprescription.com directly.';if(d.success)_f.reset();}).catch(function(){document.getElementById('cMsg').textContent='Sorry, something went wrong. Please email drpragnya@humanprescription.com directly.';});
+    return false;
+  }
+</script>
+
+</body>
+</html>
