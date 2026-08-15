@@ -26,7 +26,7 @@
   .nav{ position:sticky; top:0; z-index:50; background:rgba(249,197,17,.86); backdrop-filter:saturate(1.1) blur(8px); border-bottom:1px solid rgba(20,20,20,.08); }
   .nav-inner{ max-width:1200px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; gap:20px; }
   .brand-mini{ display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-family:"Poppins"; font-weight:800; letter-spacing:.16em; text-transform:uppercase; font-size:14px; }
-  .brand-mini .dot{ width:26px; height:26px; flex:none; }
+  .brand-mini .dot{ width:39px; height:30px; flex:none; background-image:url(images/podcast_cover.png); background-size:93px 93px; background-position:-27px -9px; background-repeat:no-repeat; mix-blend-mode:darken; }
   .brand-mini .rx{ color:var(--red); }
   .nav .links{ margin-left:auto; display:flex; gap:28px; }
   .nav .links a{ color:var(--ink); text-decoration:none; font-weight:500; font-size:14px; letter-spacing:.02em; opacity:.85; }
@@ -120,7 +120,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a class="brand-mini" href="#top">
-      <svg class="dot" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6a14 14 0 0 0 0 28" stroke="#141414"></path><path d="M20 10c5 0 9 4.4 9 10s-4 10-9 10" stroke="#EA4318"></path><path d="M20 14c3 0 5.5 2.6 5.5 6S23 26 20 26" stroke="#EA4318"></path></g></svg>
+      <span class="dot" role="img" aria-label="Human Prescription Rx"></span>
       Human Prescription <span class="rx">Rx</span>
     </a>
     <nav class="links" aria-label="Primary">
