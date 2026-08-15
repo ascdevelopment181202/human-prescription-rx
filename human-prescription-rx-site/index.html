@@ -26,7 +26,7 @@
   .nav{ position:sticky; top:0; z-index:50; background:rgba(249,197,17,.86); backdrop-filter:saturate(1.1) blur(8px); border-bottom:1px solid rgba(20,20,20,.08); }
   .nav-inner{ max-width:1200px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; gap:20px; }
   .brand-mini{ display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-family:"Poppins"; font-weight:800; letter-spacing:.16em; text-transform:uppercase; font-size:14px; }
-  .brand-mini .dot{ width:42px; height:33px; flex:none; background-image:url(images/podcast_cover.png); background-size:101px 101px; background-position:-29px -10px; background-repeat:no-repeat; mix-blend-mode:darken; }
+  .brand-mini .dot{ width:56px; height:56px; flex:none; background-image:url(images/podcast_cover.png); background-size:contain; background-position:center; background-repeat:no-repeat; mix-blend-mode:darken; }
   .brand-mini .rx{ color:var(--red); }
   .nav .links{ margin-left:auto; display:flex; gap:28px; }
   .nav .links a{ color:var(--ink); text-decoration:none; font-weight:500; font-size:14px; letter-spacing:.02em; opacity:.85; }
@@ -120,7 +120,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a class="brand-mini" href="#top">
-      <span class="dot" aria-hidden="true"></span>Human Prescription <span class="rx">Rx</span>
+      <span class="dot" role="img" aria-label="Human Prescription Rx"></span>
       
     </a>
     <nav class="links" aria-label="Primary">
