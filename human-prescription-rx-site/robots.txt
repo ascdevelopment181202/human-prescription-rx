@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /index_3.html
+
+Sitemap: https://www.humanprescription.com/sitemap.xml
