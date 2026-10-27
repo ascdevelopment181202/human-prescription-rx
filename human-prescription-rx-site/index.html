@@ -71,6 +71,11 @@
   .portrait img{ width:100%; height:100%; object-fit:cover; display:block; }
   h2{ text-wrap:balance; }
   #episodes li:hover{ background:#FBF6E9; }
+  .clip-btn{ transition:transform .18s ease, box-shadow .18s ease; }
+  .clip-btn:hover{ transform:translateY(-3px); box-shadow:0 18px 34px -20px rgba(20,20,20,.65); }
+  .clip-btn:focus-visible{ outline:3px solid #EA4318; outline-offset:3px; }
+  .clip-btn:hover .clip-play > span{ background:rgba(234,67,24,.92); }
+  @media (prefers-reduced-motion:reduce){ .clip-btn, .clip-btn:hover{ transform:none; transition:none; } }
   #contact-send:hover{ background:#141414 !important; color:#F9C511 !important; }
   footer a:hover{ color:#F9C511 !important; }
   .mobile-panel{ display:none; }
@@ -287,6 +292,76 @@
   </div>
 </section>
 
+<section id="clips" style="background:#FBF6E9;border-top:1px solid rgba(20,20,20,.14)">
+  <div style="max-width:1200px;margin:0 auto;padding:88px 24px">
+    <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:40px">
+      <div>
+        <p style="margin:0 0 10px;font-family:Poppins,sans-serif;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.78)">Clips</p>
+        <h2 style="margin:0;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(30px,4vw,44px);letter-spacing:-.01em">Moments from the episodes</h2>
+      </div>
+      <a href="https://www.youtube.com/@humanprescription-rx" target="_blank" rel="noopener" style="font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:1.6px solid #141414;padding-bottom:4px">More on YouTube</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:26px;justify-content:center">
+      <figure style="margin:0;flex:0 1 240px;max-width:275px">
+        <button type="button" class="clip-btn" data-id="1fDYvEPKv_o" aria-label="Play clip: She waited six months, then changed his life" style="display:block;width:100%;padding:0;border:none;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:9/16;background:#141414;cursor:pointer">
+          <img src="https://i.ytimg.com/vi/1fDYvEPKv_o/oardefault.jpg" onerror="this.src='https://i.ytimg.com/vi/1fDYvEPKv_o/hqdefault.jpg'" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+          <span class="clip-play" aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <span style="width:58px;height:58px;border-radius:999px;background:rgba(20,20,20,.62);display:flex;align-items:center;justify-content:center">
+              <svg width="20" height="24" viewBox="0 0 20 24" aria-hidden="true"><path d="M2 2 18 12 2 22Z" fill="#F9C511"></path></svg>
+            </span>
+          </span>
+        </button>
+        <figcaption style="margin:14px 2px 0">
+          <p style="margin:0;font-family:Poppins,sans-serif;font-weight:700;font-size:14.5px;line-height:1.35;letter-spacing:-.01em">She waited six months, then changed his life</p>
+          <p style="margin:5px 0 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,20,20,.62)">Dr Barry Morguelan</p>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;flex:0 1 240px;max-width:275px">
+        <button type="button" class="clip-btn" data-id="WOVdnDTU4d8" aria-label="Play clip: Loneliness is like 15 cigarettes a day" style="display:block;width:100%;padding:0;border:none;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:9/16;background:#141414;cursor:pointer">
+          <img src="https://i.ytimg.com/vi/WOVdnDTU4d8/oardefault.jpg" onerror="this.src='https://i.ytimg.com/vi/WOVdnDTU4d8/hqdefault.jpg'" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+          <span class="clip-play" aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <span style="width:58px;height:58px;border-radius:999px;background:rgba(20,20,20,.62);display:flex;align-items:center;justify-content:center">
+              <svg width="20" height="24" viewBox="0 0 20 24" aria-hidden="true"><path d="M2 2 18 12 2 22Z" fill="#F9C511"></path></svg>
+            </span>
+          </span>
+        </button>
+        <figcaption style="margin:14px 2px 0">
+          <p style="margin:0;font-family:Poppins,sans-serif;font-weight:700;font-size:14.5px;line-height:1.35;letter-spacing:-.01em">Loneliness is like 15 cigarettes a day</p>
+          <p style="margin:5px 0 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,20,20,.62)">Dr Barry Morguelan</p>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;flex:0 1 240px;max-width:275px">
+        <button type="button" class="clip-btn" data-id="hFmc9hY87xU" aria-label="Play clip: Why an expert says don&#39;t praise your kids" style="display:block;width:100%;padding:0;border:none;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:9/16;background:#141414;cursor:pointer">
+          <img src="https://i.ytimg.com/vi/hFmc9hY87xU/oardefault.jpg" onerror="this.src='https://i.ytimg.com/vi/hFmc9hY87xU/hqdefault.jpg'" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+          <span class="clip-play" aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <span style="width:58px;height:58px;border-radius:999px;background:rgba(20,20,20,.62);display:flex;align-items:center;justify-content:center">
+              <svg width="20" height="24" viewBox="0 0 20 24" aria-hidden="true"><path d="M2 2 18 12 2 22Z" fill="#F9C511"></path></svg>
+            </span>
+          </span>
+        </button>
+        <figcaption style="margin:14px 2px 0">
+          <p style="margin:0;font-family:Poppins,sans-serif;font-weight:700;font-size:14.5px;line-height:1.35;letter-spacing:-.01em">Why an expert says don&#39;t praise your kids</p>
+          <p style="margin:5px 0 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,20,20,.62)">Nickita Starck</p>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;flex:0 1 240px;max-width:275px">
+        <button type="button" class="clip-btn" data-id="lIFK3MC9MP8" aria-label="Play clip: The rat study that explains your fear" style="display:block;width:100%;padding:0;border:none;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:9/16;background:#141414;cursor:pointer">
+          <img src="https://i.ytimg.com/vi/lIFK3MC9MP8/oardefault.jpg" onerror="this.src='https://i.ytimg.com/vi/lIFK3MC9MP8/hqdefault.jpg'" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+          <span class="clip-play" aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <span style="width:58px;height:58px;border-radius:999px;background:rgba(20,20,20,.62);display:flex;align-items:center;justify-content:center">
+              <svg width="20" height="24" viewBox="0 0 20 24" aria-hidden="true"><path d="M2 2 18 12 2 22Z" fill="#F9C511"></path></svg>
+            </span>
+          </span>
+        </button>
+        <figcaption style="margin:14px 2px 0">
+          <p style="margin:0;font-family:Poppins,sans-serif;font-weight:700;font-size:14.5px;line-height:1.35;letter-spacing:-.01em">The rat study that explains your fear</p>
+          <p style="margin:5px 0 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,20,20,.62)">Nickita Starck</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section aria-label="Philosophy" style="border-top:1px solid rgba(20,20,20,.14);border-bottom:1px solid rgba(20,20,20,.14)">
   <div style="max-width:1200px;margin:0 auto;padding:110px 24px;text-align:center">
     <blockquote style="margin:0 auto;max-width:24ch;font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(32px,5.6vw,68px);line-height:1.08;letter-spacing:-.015em">Living well begins with understanding the <span style="color:#EA4318">mind</span> and body as one.</blockquote>
@@ -368,6 +443,18 @@
     var _f=document.getElementById('form-contact');document.getElementById('cMsg').textContent='Sending...';fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(_f)}).then(function(r){return r.json();}).then(function(d){document.getElementById('cMsg').textContent=d.success?'Thank you, your message has been sent.':'Sorry, something went wrong. Please email drpragnya@humanprescription.com directly.';if(d.success)_f.reset();}).catch(function(){document.getElementById('cMsg').textContent='Sorry, something went wrong. Please email drpragnya@humanprescription.com directly.';});
     return false;
   }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.clip-btn') : null;
+    if(!b) return;
+    var id = b.getAttribute('data-id');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+    f.title = b.getAttribute('aria-label') || 'Clip';
+    f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    f.setAttribute('style','width:100%;aspect-ratio:9/16;border:0;border-radius:18px;display:block;background:#141414');
+    b.replaceWith(f);
+  });
 </script>
 
 </body>
